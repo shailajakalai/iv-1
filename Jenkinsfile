@@ -1,7 +1,7 @@
 node{
     
     stage('Clone repo'){
-        
+        git branch: 'main', credentialsId: '3e747781-b5bf-4386-8794-f76f36cbd8c0', url: 'https://github.com/shailajakalai/iv-1.git'
     }
     stage('Maven Build'){
         def mavenHome = tool name: "maven3.9.2", type: "maven"
